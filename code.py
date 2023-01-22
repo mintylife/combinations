@@ -1,20 +1,46 @@
-age_cols       = [col for col in train_df.columns if 'age' in col]
-trs_cols       = [col for col in train_df.columns if 'trs' in col]
-amt_cols       = [col for col in train_df.columns if 'amt' in col]
-clients_cols   = [col for col in train_df.columns if 'clients'   in col]
-suppliers_cols = [col for col in train_df.columns if 'suppliers' in col]
-div_cols       = [col for col in train_df.columns if '/'     in col]
-label_cols     = [col for col in train_df.columns if 'label' in col]
+cols = [
+      'age_cols'
+    , 'trs_cols'
+    , 'amt_cols'
+    , 'clients_cols'
+    , 'suppliers_cols'
+    , 'div_cols'
+    , 'label_cols'
+    , 'tov_cols'
+    , 'serv_cols'
+    , 'in_cols'
+    , 'out_cols'
+    , 'oborot_cols'
+    , 'prop_cols'
+    , 'with_cols'
+    , 'median_cols'
+    , 'divers_cols'
+    , 'temp_cols'
+    , 'vkl_cols'
+]
 
-tov_cols    = [col for col in train_df.columns if 'Товары' in col]
-serv_cols   = [col for col in train_df.columns if 'Услуги' in col]
+keywords = [
+      'age' 
+    , 'trs' 
+    , 'amt' 
+    , 'clients' 
+    , 'suppliers'
+    , '/' 
+    , 'label' 
+    , 'Товары'
+    , 'Услуги' 
+    , 'IN' 
+    , 'OUT' 
+    , 'oborot' 
+    , 'prop'
+    , 'with' 
+    , 'median'
+    , 'divers' 
+    , 'temp' 
+    , 'Вклады' 
+]
 
-in_cols     = [col for col in train_df.columns if 'IN'  in col]
-out_cols    = [col for col in train_df.columns if 'OUT' in col]
-oborot_cols = [col for col in train_df.columns if 'oborot' in col]
-prop_cols   = [col for col in train_df.columns if 'prop'   in col]
-with_cols   = [col for col in train_df.columns if 'with'   in col]
-median_cols = [col for col in train_df.columns if 'median' in col]
-divers_cols = [col for col in train_df.columns if 'divers' in col]
-temp_cols   = [col for col in train_df.columns if 'temp'   in col]
-vkl_cols    = [col for col in train_df.columns if 'Вклады' in col]
+groups = {}
+for new_col, keyword in zip(cols, keywords):
+    groups[new_col]  = [col for col in train_df.columns if keyword in col]
+groups
