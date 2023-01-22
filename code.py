@@ -37,7 +37,11 @@ keywords = [
     , 'median'
     , 'divers' 
     , 'temp' 
+<<<<<<< HEAD
     , 'Вклады and something else' 
+=======
+    , 'Вклады и аренда' 
+>>>>>>> 34e66c04d0f135431cd5984383d206a483f62046
 ]
 
 groups = {}
