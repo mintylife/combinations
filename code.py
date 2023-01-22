@@ -40,6 +40,8 @@ keywords = [
     , 'Вклады и аренда' 
 ]
 
+print('hello world!')
+
 groups = {}
 for new_col, keyword in zip(cols, keywords):
     groups[new_col]  = [col for col in train_df.columns if keyword in col]
