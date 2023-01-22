@@ -37,7 +37,7 @@ keywords = [
     , 'median'
     , 'divers' 
     , 'temp' 
-    , 'Вклады' 
+    , 'Вклады и аренда' 
 ]
 
 groups = {}
